@@ -37,8 +37,25 @@ describe ('getMetaData() - Get correct file metadata from file id', function() {
 			mm: '03',
 			dd: '31',
 			dayOfWeek: 'Sat',
-			startTime: '1859'
+			startTime: '1900'
 		});
+	});
+
+});
+
+
+
+// =============================================================================
+describe ('roundOffTime() - Round Off time', function() {
+	let
+		timeStrings = {
+			'1': '1400',
+			'2': '1359'
+		};
+
+	it ('... should get the correct meta data', function() {
+		expect ( renameFm4.roundOffTime( timeStrings['1'] ) ).to.equal('1400');
+		expect ( renameFm4.roundOffTime( timeStrings['2'] ) ).to.equal('1400');
 	});
 
 });
