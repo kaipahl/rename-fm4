@@ -7,7 +7,7 @@
 # 4. Move them into test/fixtures
 # 5. Try the rename via node index.js test/fixtures
 # 6. If it works, put the real files into it
-for i in `cat test/filelist.txt | sed '/^$/d;s/^ *//;s/ *$//'`;
-  do mkdir -p `dirname $i`;
-     touch `echo $(dirname $i)$(echo "/")$(basename $i)`;
+for i in $(cat test/filelist.txt | sed '/^$/d;s/^ *//;s/ *$//');
+  do mkdir -p $(dirname "$i");
+     touch $(echo $(echo "test/fixtures/")$(dirname $i)$(echo "/")$(basename $i));
   done
