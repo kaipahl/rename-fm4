@@ -19,3 +19,4 @@ Generally speaking this is a two step process:
 ## Rename real files
 
 5. Rename the real files with `node index.js /Volumes/Musikplatte/fm4-src`
+   `node index.js /Volumes/Musikplatte/fm4-src`
