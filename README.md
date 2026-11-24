@@ -20,3 +20,21 @@ Generally speaking this is a two step process:
 
 5. Rename the real files with `node index.js /Volumes/Musikplatte/fm4-src`
    `node index.js /Volumes/Musikplatte/fm4-src`
+
+## Tests
+
+The unit tests in `test/*.test.js` use Node.js' built-in test runner (`node:test` and
+`node:assert/strict`). The project has no dependencies, so nothing needs to be installed:
+
+```
+npm test
+```
+
+This runs `node --test`, which finds and executes `test/index.test.js`.
+
+Supported Node.js version: **18 or newer** (verified with Node 18, 20, 22 and 24).
+The tests do not need the generated `test/fixtures` files.
+
+Wallaby.js (optional) is configured in `wallaby.conf.js` via the automatic `node:test`
+detection, which requires Node.js **22.3.0 or newer** and uses the `node` executable
+found on your `PATH`.
