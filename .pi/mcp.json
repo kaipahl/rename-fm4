@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "intellij": {
+      "enabled": false
+    },
+    "phpstorm": {
+      "enabled": false
+    }
+  }
+}
